@@ -1,0 +1,47 @@
+First Setup Data Packet:
+========================= 
+
+  . bmRequestType: 0x21
+    . 0... ....  (Direction: Host-to-device) 
+    . .01. ....  (Type: Class (0x1))
+    . ...0 0001  (Recipient: Interface (0x01)) 
+
+  . bRequest: 9 
+  . wValue: 0x03F0 
+  . wIndex: 0x1 
+  . wLength: 4 
+  . Data Fragment: 0xF0440000
+
+
+Second Setup Data Packet (Set Color):
+===================================== 
+
+  . bmRequestType: 0x21
+    . 0... ....  (Direction: Host-to-device) 
+    . .01. ....  (Type: Class (0x1))
+    . ...0 0001  (Recipient: Interface (0x01)) 
+
+  . bRequest: 9 
+  . wValue: 0x03F0 
+  . wIndex: 0x1 
+  . wLength: 35 
+  . Data Fragment:  
+                 
+        0000   f3 '04' 03 06 82 06 0a 40 01 00 00 02 00 00 03 00
+        0010   00 04 00 00 05 00 00 00 01 00 01 00 00 0d 00 00
+        0020   0c 00 00
+     
+   The Quoted byte is the color 
+
+
+
+enum Color {
+  COLOR_BLACK = 0x0, 
+  COLOR_RED, 
+  COLOR_GREEN, 
+  COLOR_YELLOW, 
+  COLOR_BLUE, 
+  COLOR_PINK, 
+  COLOR_LIGHT_BLUE, 
+  COLOR_WHITE
+};
