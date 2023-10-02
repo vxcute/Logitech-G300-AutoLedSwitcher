@@ -10,7 +10,7 @@
 #define PRODUCT_ID 0xC246
 #define MOUSE_INTERFACE 1
 
-/* ++ stolen from libratbg XD */
+/* ++ stolen from libratbag ^_^ */
 #define HID_MAX_REPORT_SIZE 4096
 struct logitech_g300_F0_report {
   uint8_t id;
