@@ -164,6 +164,6 @@ int main(void) {
     }
 
     sleep(1);
-    color = (color + 1) % 7;
+    color = (color + 1) % 8;
   }
 }
