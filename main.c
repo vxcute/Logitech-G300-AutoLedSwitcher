@@ -28,7 +28,6 @@ int main(void) {
   libusb_device *dev;
   hid_device *hdh;
   int stat;
-  unsigned char color;
 
   stat = libusb_init(&ctx);
   if (stat < 0) {
@@ -130,6 +129,7 @@ int main(void) {
     return -1;
   }
 
+  unsigned char color = 0;
   while(1) {
 
     report[1] = color;
