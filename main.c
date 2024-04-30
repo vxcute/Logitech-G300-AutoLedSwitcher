@@ -130,10 +130,7 @@ int main(void) {
     return -1;
   }
 
-  for (;;) {
-
-    if (color > 7)
-      color = 0;
+  while(1) {
 
     report[1] = color;
 
@@ -167,6 +164,6 @@ int main(void) {
     }
 
     sleep(1);
-    color++;
+    color = (color + 1) % 7;
   }
 }
